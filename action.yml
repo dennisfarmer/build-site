@@ -1,0 +1,14 @@
+name: 'Build Site'
+description: 'Use this to build an Eleventy-based static website'
+author: 'Dennis Farmer'
+inputs: 
+  args:
+    description: 'eleventy [ARGS]'
+    required: false
+  install_dependencies:
+    description: 'whether to first run `npm install` before running eleventy'
+    required: false
+    default: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
