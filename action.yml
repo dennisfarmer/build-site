@@ -2,13 +2,10 @@ name: 'Build Site'
 description: 'Use this to build an Eleventy-based static website'
 author: 'Dennis Farmer'
 inputs: 
-  args:
-    description: 'eleventy [ARGS]'
+  template_dir:
+    description: 'directory where eleventy should save finished template to'
     required: false
-  install_dependencies:
-    description: 'whether to first run `npm install` before running eleventy'
-    required: false
-    default: false
+    default: "_site"
 runs:
   using: 'docker'
   image: 'Dockerfile'
